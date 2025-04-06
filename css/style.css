@@ -1,0 +1,145 @@
+/* 상단 컨테이너(로그인/로그아웃, 시계)를 일반 흐름으로 배치 */
+#top-container {
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* 요소 간 수직 간격 */
+}
+
+/* 로그인 폼, 로그아웃 폼, 시계 영역은 일반 블록 요소로 표시 */
+#Login-Form,
+#Logout-Form,
+#clock {
+  font-size: 72px; /* 이전 48px에서 72px로 변경 */
+  font-weight: bold;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 5px;
+}
+
+#Logout-Form aa {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* 날씨: 화면 하단 우측 고정 */
+#weather {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  text-align: right;
+  z-index: 10;
+  color: white;
+}
+
+.weather-city {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+
+.weather-details {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.weather-temp {
+  font-size: 24px;
+  margin: 0;
+}
+
+.weather-desc {
+  font-size: 14px;
+  margin: 0 0 0 10px;
+  color: white;
+}
+
+/* 투두 폼 및 리스트는 고정 요소가 없으므로 일반 흐름으로 */
+#todo-form {
+  margin: 30px auto 10px auto; /* 상단 요소와 간격을 위해 margin-top 추가 */
+  max-width: 400px;
+}
+
+#todo-form input {
+  padding: 10px;
+  width: 60%;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  background: white;
+
+}
+
+#todo-form button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background: white;
+  color: black;
+  font-weight: bold;
+}
+
+#todo-list {
+  list-style: disc inside;
+  margin: 10px auto;
+  max-width: 400px;
+  padding: 0 10px;
+  color: black;
+}
+
+#todo-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+}
+
+#todo-list li span {
+  background: none;  /* 글로벌 반투명 배경 제거 */
+  padding: 0;        /* 필요시 패딩 제거 */
+  border-radius: 0;  /* 라운딩 제거 */
+  margin-right: 10px;
+  color: black;
+}
+
+#todo-list li button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: black;
+}
+
+/* body 스타일 */
+body {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* 텍스트 외곽선 및 그림자 제거, 색상 기본값 사용 */
+h1, h2, h3, h4, h5, h6,
+p, span, input, button {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 2px 4px;
+  border-radius: 4px;
+  /* color는 상황에 따라 white 또는 black으로 개별 지정 */
+}
+
+  .hidden {
+    display: none;
+  }

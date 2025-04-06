@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Momentum</title>
+  </head>
+  <body>
+  <!-- 상단 컨테이너: 로그인폼, 시계, 로그아웃(인사) -->
+  <div id="top-container">
+    <form id="Login-Form" class="hidden">
+      <input required maxlength="15" type="text" placeholder="이름을 입력해주세요" />
+      <input type="submit" value="Log In" />
+    </form>
+    <div id="clock"></div>
+    <form id="Logout-Form" class="hidden">
+      <aa></aa>
+      <input type="submit" value="Log Out" />
+    </form>
+  </div>
+  
+  <!-- 날씨 영역은 하단 우측에 고정 -->
+  <div id="weather">
+    <h3 class="weather-city"></h3>
+    <div class="weather-details">
+      <p class="weather-temp"></p>
+      <p class="weather-desc"></p>
+    </div>
+  </div>
+  
+  <!-- 일반 콘텐츠: 투두리스트 -->
+  <form id="todo-form">
+    <input type="text" placeholder="할 일을 입력하세요" required />
+    <button type="submit">추가</button>
+  </form>
+  <ul id="todo-list"></ul>
+  
+  <script src="js/greeting.js"></script>
+  <script src="js/clock.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="js/todolist.js"></script>
+  <script src="js/background.js"></script>
+  </body>
+</html>
